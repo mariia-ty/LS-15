@@ -93,7 +93,7 @@ addBtn.addEventListener("click", () => {
     .catch((err) => console.error(err));
 });
 */
-
+/*
 fetch('')
     .then(res => res.json())
     .then(data => {
@@ -105,3 +105,72 @@ fetch('')
             list.appendChild(li)
         });
     })
+*/
+
+/*
+fetch("https://jsonplaceholder.typicode.com/users")
+  .then(res => res.json())
+  .then(users => console.log(users));
+  */
+
+/*
+fetch("https://jsonplaceholder.typicode.com/users")
+  .then(res => res.json())
+  .then(data => {
+    const list = document.getElementById('mailList');
+    list.innerHTML = '';
+    data.forEach(user => {
+      const li = document.createElement('li'); 
+      li.textContent = user.email; 
+      list.appendChild(li); 
+    });
+  })
+*/
+/*
+fetch("https://jsonplaceholder.typicode.com/users", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ name: "Lily", email: "lily@gmail.com" })
+})
+  .then(res => res.json())
+  .then(data => console.log(data))
+*/
+/*
+fetch("https://jsonplaceholder.typicode.com/users/1", {
+  method: "PUT", 
+  headers:{"Content-Type":"application/json"}, 
+  body: JSON.stringify({name: "Jacob", email:"jacon12@gmail.com"})
+})
+  .then(res => res.json())
+  .then(data => console.log(data))
+*/
+/*
+fetch("https://jsonplaceholder.typicode.com/users/2", {
+  method: "PATCH",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ email: "vasya.pupkin@gmail.com" })})
+  .then((res) => res.json())
+  .then((data) => console.log(data))
+*/
+/*
+fetch("https://jsonplaceholder.typicode.com/users/1", {
+  method: "DELETE"
+})
+  .then(() => console.log("gone"))
+*/
+/*
+fetch("https://jsonplaceholder.typicode.com/posts", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({title: "NEW", body: "Hello"})
+})
+  .then(res => res.json())
+  .then(data => console.log(data))
+*/
+/*
+fetch("https://jsonplaceholder.typicode.com/users/1", {
+  method:"DELETE"
+})
+.then(data => console.log(data, "nothing"))
+*/
+
